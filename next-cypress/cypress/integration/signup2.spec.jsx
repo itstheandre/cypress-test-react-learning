@@ -1,9 +1,7 @@
 /// <reference types="cypress" />
-import { mount } from "cypress-react-unit-test";
-import Signup from "../../pages/signup";
-describe("<Signup /> Page", () => {
-  it("Makes call", () => {
-    mount(<Signup />);
+
+describe("page", () => {
+  it("goes to signup", () => {
     cy.server();
     cy.route({
       method: "POST",
@@ -11,6 +9,9 @@ describe("<Signup /> Page", () => {
       status: 201,
       response: {},
     }).as("signup");
+    cy.visit("/");
+    cy.get(".signupPage").click();
+    cy.url().should("include", "signup");
 
     cy.get(".username").type("André");
     cy.get("input[type='password']").type("password");
@@ -19,5 +20,8 @@ describe("<Signup /> Page", () => {
       username: "André",
       password: "password",
     });
+
+    cy.get(".message").should("contain.text", "Redirecting");
+    cy.url().should("not.contain", "signup");
   });
 });

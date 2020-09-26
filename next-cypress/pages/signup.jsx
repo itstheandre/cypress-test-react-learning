@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
+import { signup } from "../lib";
 
 const Signup = () => {
   const router = useRouter();
@@ -9,7 +10,8 @@ const Signup = () => {
   async function submit(e) {
     e.preventDefault();
     console.log(form);
-    const { data } = await axios.post("api/signup", form);
+    const data = await signup(form);
+    // const { data } = await axios.post("api/signup", form);
     console.log("data:", data);
     setMessage("Redirecting you back to main page");
     setTimeout(() => {
@@ -18,7 +20,7 @@ const Signup = () => {
   }
   return (
     <div>
-      {message && <h1>{message}</h1>}
+      {message && <h1 className="message">{message}</h1>}
       <form onSubmit={submit}>
         <input
           type="text"

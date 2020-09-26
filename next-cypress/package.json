@@ -5,7 +5,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "cypress open",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "comps": "cypress open --config-file cypress-unit.json",
+    "ci:test": "cypress run --config-file cypress-unit.json",
+    "test2": "start-test dev 3000 comps",
+    "ci": "start-test dev 3000 ci:test",
+    "preci": "rm -rf .nyc_output coverage .next || true"
   },
   "dependencies": {
     "axios": "^0.20.0",
@@ -16,6 +24,7 @@
   "devDependencies": {
     "@cypress/code-coverage": "^3.8.1",
     "cypress": "^5.2.0",
-    "cypress-react-unit-test": "^4.14.4"
+    "cypress-react-unit-test": "^4.14.4",
+    "start-server-and-test": "^1.11.4"
   }
 }

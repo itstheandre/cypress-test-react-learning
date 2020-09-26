@@ -1,9 +1,8 @@
 /// <reference types="cypress" />
-import { mount } from "cypress-react-unit-test";
 import Signup from "../../pages/signup";
 describe("<Signup /> Page", () => {
   it("Makes call", () => {
-    mount(<Signup />);
+    cy.visit("http://localhost:3000");
     cy.server();
     cy.route({
       method: "POST",
