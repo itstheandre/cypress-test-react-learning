@@ -9,9 +9,7 @@
     "test": "cypress open",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "comps": "cypress open --config-file cypress-unit.json",
     "ci:test": "cypress run --config-file cypress-unit.json",
-    "test2": "start-test dev 3000 comps",
     "ci": "start-test dev 3001 ci:test",
     "preci": "rm -rf .nyc_output coverage .next || true"
   },
