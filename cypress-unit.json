@@ -6,7 +6,7 @@
   "experimentalComponentTesting": true,
   "componentFolder": "cypress/components",
   "watchForFileChanges": true,
-  "baseUrl": "http://localhost:3000",
+  "baseUrl": "http://localhost:3001",
   "env": {
     "codeCoverage": {
       "url": "/api/__coverage__"
