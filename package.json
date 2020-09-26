@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start",
     "test": "cypress open",
@@ -12,7 +12,7 @@
     "comps": "cypress open --config-file cypress-unit.json",
     "ci:test": "cypress run --config-file cypress-unit.json",
     "test2": "start-test dev 3000 comps",
-    "ci": "start-test dev 3000 ci:test",
+    "ci": "start-test dev 3001 ci:test",
     "preci": "rm -rf .nyc_output coverage .next || true"
   },
   "dependencies": {
