@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { signup } from \"./signup\";\nexport { signup };","map":{"version":3,"sources":["/Users/andredealbuquerque/LTC/cypress-test-react-next/lib/index.js"],"names":["signup"],"mappings":"AAAA,SAASA,MAAT,QAAuB,UAAvB;AACA,SAASA,MAAT","sourcesContent":["import { signup } from \"./signup\";\nexport { signup };\n"]},"metadata":{},"sourceType":"module"}
