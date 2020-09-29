@@ -9,9 +9,8 @@
     "test": "cypress open",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "ci:test": "cypress run --config-file cypress-unit.json",
-    "ci": "start-test dev 3001 ci:test",
-    "preci": "rm -rf .nyc_output coverage .next || true"
+    "ci:test": "cypress open --config-file cypress-unit.json",
+    "ci": "start-test dev 3001 ci:test"
   },
   "dependencies": {
     "axios": "^0.20.0",
@@ -21,7 +20,7 @@
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.8.1",
-    "cypress": "^5.2.0",
+    "cypress": "^5.3.0",
     "cypress-react-unit-test": "^4.14.4",
     "start-server-and-test": "^1.11.4"
   }

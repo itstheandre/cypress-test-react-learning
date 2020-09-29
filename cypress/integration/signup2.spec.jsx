@@ -22,6 +22,7 @@ describe("page", () => {
     });
 
     cy.get(".message").should("contain.text", "Redirecting");
+    cy.wait(2000);
     cy.url().should("not.contain", "signup");
   });
 });
